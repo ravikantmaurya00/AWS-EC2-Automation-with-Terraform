@@ -3,9 +3,10 @@ This repository contains Terraform scripts to automate the provisioning of AWS E
 ## Automating AWS EC2 Provisioning with Terraform
 - **Step 1:-**  Login to your AWS Management Console. 
 - **Step 2:-** Create a EC2 Instance .
-  [](https://github.com/ravikantmaurya00/AWS-EC2-Automation-with-Terraform/blob/main/ScreenShot/ec2%20instance.png)
+  ![](https://github.com/ravikantmaurya00/AWS-EC2-Automation-with-Terraform/blob/main/ScreenShot/ec2%20instance.png)
   
 - **Step 3:-** Then Select  the instance and click on connect.
+  ![](https://github.com/ravikantmaurya00/AWS-EC2-Automation-with-Terraform/blob/main/ScreenShot/ec2%20connect.png.png)
 - **Step 4:-** Then  **Install Terraform**.
     - **Windows**
       -  Download Terraform from the [Terraform website].
@@ -26,6 +27,7 @@ This repository contains Terraform scripts to automate the provisioning of AWS E
       sudo apt-get update && sudo apt-get install terraform
       terraform --version
        ```
+       ![](https://github.com/ravikantmaurya00/AWS-EC2-Automation-with-Terraform/blob/main/ScreenShot/install%20terraform.png)
           
 - **Step 5:-** **Configuring Terraform for AWS**
   
@@ -37,6 +39,7 @@ This repository contains Terraform scripts to automate the provisioning of AWS E
        sudo apt install awscli  # Linux
        brew install awscli       # macOS
        ```
+       ![](https://github.com/ravikantmaurya00/AWS-EC2-Automation-with-Terraform/blob/main/ScreenShot/install%20awscli.png)
     - Configure AWS:
       ```
       aws configure
@@ -44,13 +47,22 @@ This repository contains Terraform scripts to automate the provisioning of AWS E
       Provide your AWS Access Key ,Secret Key ,Region and Output format.
       - How to get AWS Access Key and Secret Key
         - **Step 1:-** In AWS Search Bar  search for IAM( **Identity and  Access Management**).
+          ![](https://github.com/ravikantmaurya00/AWS-EC2-Automation-with-Terraform/blob/main/ScreenShot/10.png)
         - **Step 2:-** In left Panel click on **users** and then on Create a new User.
         - **Step 3:-** Name yor IAM User and  then click on next.
-        - **Step 4:-**  Then again click on Create user and your User is created. 
+          ![](https://github.com/ravikantmaurya00/AWS-EC2-Automation-with-Terraform/blob/main/ScreenShot/11.png)
+
+           ![](https://github.com/ravikantmaurya00/AWS-EC2-Automation-with-Terraform/blob/main/ScreenShot/12.png)
+        - **Step 4:-**  Then again click on Create user and your User is created.
+          ![](https://github.com/ravikantmaurya00/AWS-EC2-Automation-with-Terraform/blob/main/ScreenShot/13.png)
+          
         - **Step 5:-**  Select your user and click on Create A new **Access Key**.
+           ![](https://github.com/ravikantmaurya00/AWS-EC2-Automation-with-Terraform/blob/main/ScreenShot/14.png)
         - **Step 6:-**  Then select **Command Line Interface (CLI)**. And  check the  recommendation and then click on next.
+          ![](https://github.com/ravikantmaurya00/AWS-EC2-Automation-with-Terraform/blob/main/ScreenShot/15.png)
         - **Step 7:-** Then Write the description for creating the **Access Key**. And click on Create Access Key.
-        - **Step 8:-** And then your Access Key is created Save your Secret Key and download your **csv.file**
+        - **Step 8:-** And then your Access Key is created Save your Secret Key and download your **csv.file**.
+          ![](https://github.com/ravikantmaurya00/AWS-EC2-Automation-with-Terraform/blob/main/ScreenShot/16.png)
   - **Manually Adding AWS Credentials***
     Store credentials in `~/.aws/credentials`:
     ```
@@ -85,6 +97,7 @@ This repository contains Terraform scripts to automate the provisioning of AWS E
     }
     }
     ```
+    ![](https://github.com/ravikantmaurya00/AWS-EC2-Automation-with-Terraform/blob/main/ScreenShot/main%20file.png)
     Then Press **CTRL + X**, then **Y**, and hit **Enter** to save and exit.
 - **Step 7:-** **Initializing and Applying Terraform**
   
@@ -93,11 +106,14 @@ This repository contains Terraform scripts to automate the provisioning of AWS E
   terraform init
   ```
   This downloads the necessary provider plugins.
+  ![](https://github.com/ravikantmaurya00/AWS-EC2-Automation-with-Terraform/blob/main/ScreenShot/terraform%20initialised.png)
   - **Check the Execution Plan**
     ```
     terraform plan
     ```
     This shows what Terraform will create.
+    ![](https://github.com/ravikantmaurya00/AWS-EC2-Automation-with-Terraform/blob/main/ScreenShot/terrform%20plan.png)
+    ![](https://github.com/ravikantmaurya00/AWS-EC2-Automation-with-Terraform/blob/main/ScreenShot/terraform%20plan1.png)
   - **Apply the Configuration**
     
     Now, deploy your EC2 instance:
@@ -105,10 +121,13 @@ This repository contains Terraform scripts to automate the provisioning of AWS E
     terraform apply -auto-approve
     ```
     This provisions the EC2 instance in AWS.
+    ![](https://github.com/ravikantmaurya00/AWS-EC2-Automation-with-Terraform/blob/main/ScreenShot/configuration%20terraform.png)
 - **Step 8:-** **Confirming the Deployment**
   - Step 1:- Go to the AWS Console
   - Step 2:- Navigate to EC2 → Instances
   - Step 3:- Verify that your instance is running 🎉
+    ![](https://github.com/ravikantmaurya00/AWS-EC2-Automation-with-Terraform/blob/main/ScreenShot/cofirming%20deployment.png)
+    ![](https://github.com/ravikantmaurya00/AWS-EC2-Automation-with-Terraform/blob/main/ScreenShot/confirming%20deployment%201.png)
 - **Step 9:-** **Destroying the Infrastructure**
   
   When you're done, clean up resources to avoid unnecessary charges:
@@ -116,6 +135,7 @@ This repository contains Terraform scripts to automate the provisioning of AWS E
   terraform destroy -auto-approve
   ```
   This safely removes all provisioned resources.
+  ![](https://github.com/ravikantmaurya00/AWS-EC2-Automation-with-Terraform/blob/main/ScreenShot/destroying%20terrform.png)
 
 ## 💡 Key Takeaways
   - Terraform simplifies cloud provisioning with Infrastructure as Code (IaC).
