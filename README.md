@@ -38,7 +38,9 @@ This repository contains Terraform scripts to automate the provisioning of AWS E
       ```
       aws configure
       ```
-- **Step 1:-**
+      Provide your AWS Access Key ,Secret Key ,Region and Output format.
+      - How to get AWS Access Key and Secret Key
+        - **Step 1:-**
 - **Step 1:-**
 - **Step 1:-**
 - **Step 1:-**
