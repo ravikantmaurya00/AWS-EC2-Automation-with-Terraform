@@ -2,7 +2,8 @@
 This repository contains Terraform scripts to automate the provisioning of AWS EC2 instances. It simplifies infrastructure management by enabling declarative configuration, ensuring consistency, and reducing manual effort.
 ## Automating AWS EC2 Provisioning with Terraform
 - **Step 1:-**  Login to your AWS Management Console. 
-- **Step 2:-** Create a EC2 Instance  .
+- **Step 2:-** Create a EC2 Instance .
+  [](https://github.com/ravikantmaurya00/AWS-EC2-Automation-with-Terraform/blob/main/ScreenShot/ec2%20instance.png)
   
 - **Step 3:-** Then Select  the instance and click on connect.
 - **Step 4:-** Then  **Install Terraform**.
